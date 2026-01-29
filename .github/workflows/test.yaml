@@ -7,7 +7,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v5
       
-      - name: Verify helloworld.sh exists
+      - name: Verify hello.sh exists
         run: |
           if [ -f "helloworld.sh" ]; then
             echo "✅ helloworld.sh found!"
