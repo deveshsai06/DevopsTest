@@ -1,0 +1,30 @@
+name: Run HelloWorld Script
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  execute-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+      
+      - name: Verify helloworld.sh exists
+        run: |
+          if [ -f "helloworld.sh" ]; then
+            echo "✅ helloworld.sh found!"
+            echo "Permissions: $(ls -la helloworld.sh)"
+          else
+            echo "❌ helloworld.sh not found!"
+            exit 1
+          fi
+      
+      - name: Make script executable
+        run: chmod +x helloworld.sh
+      
+      - name: Run helloworld.sh
+        run: ./helloworld.sh
+      
+      - name: Display script content (for logs)
+        run: |
+          echo "📄 Content of helloworld.sh:"
+          cat helloworld.sh
+          echo "─────────────────────────"

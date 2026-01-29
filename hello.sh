@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "=================================="
+echo "Hi! I am Devesh Pratap Singh"
+echo "=================================="
+echo "Location: Hyderabad, Telangana, India"
+echo "Role: Software Engineer | Full-stack Developer"
+echo "Skills: Java, GCP, Apache Beam, DSA"
+echo ""
+echo "Current Date: $(date)"
+echo "GitHub Actions Runner: $RUNNER_OS"
+echo "GitHub Actor: $GITHUB_ACTOR"
+echo "Repository: $GITHUB_REPOSITORY"
+echo "=================================="
+echo "Ready for CI/CD automation! 🚀"
+echo "=================================="
