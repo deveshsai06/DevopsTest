@@ -9,22 +9,22 @@ jobs:
       
       - name: Verify hello.sh exists
         run: |
-          if [ -f "helloworld.sh" ]; then
-            echo "✅ helloworld.sh found!"
-            echo "Permissions: $(ls -la helloworld.sh)"
+          if [ -f "hello.sh" ]; then
+            echo "✅ hello.sh found!"
+            echo "Permissions: $(ls -la hello.sh)"
           else
-            echo "❌ helloworld.sh not found!"
+            echo "❌ hello.sh not found!"
             exit 1
           fi
       
       - name: Make script executable
-        run: chmod +x helloworld.sh
+        run: chmod +x hello.sh
       
-      - name: Run helloworld.sh
+      - name: Run hello.sh
         run: ./helloworld.sh
       
       - name: Display script content (for logs)
         run: |
-          echo "📄 Content of helloworld.sh:"
-          cat helloworld.sh
+          echo "📄 Content of hello.sh:"
+          cat hello.sh
           echo "─────────────────────────"
