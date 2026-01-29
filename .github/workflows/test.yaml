@@ -21,7 +21,7 @@ jobs:
         run: chmod +x hello.sh
       
       - name: Run hello.sh
-        run: ./helloworld.sh
+        run: ./hello.sh
       
       - name: Display script content (for logs)
         run: |
